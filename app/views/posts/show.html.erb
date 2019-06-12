@@ -3,3 +3,7 @@
 <!-- Add code here to link to the post's category. -->
 
 <p><%= @post.description %></p>
+
+
+
+category: <%= link_to @post.category.name, "/categories/#{@post.category.id}"%>
