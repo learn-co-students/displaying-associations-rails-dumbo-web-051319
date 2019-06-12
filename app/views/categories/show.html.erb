@@ -1,3 +1,11 @@
 <h1><%= @category.name %></h1>
 
 <!-- Add code here to list a category's posts. -->
+<% @category.posts.each do |post| %>
+<%= link_to post.description, post %>
+<% end %>
+<% byebug %>
+<%= link_to @category.post.title, "/post/#{@category.post.id}" %>
+
+
+<%= link_to "Update", "/categories/#{@category.id}/edit" %>
